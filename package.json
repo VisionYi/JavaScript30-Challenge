@@ -1,0 +1,21 @@
+{
+  "name": "javascript30-challenge",
+  "version": "1.0.0",
+  "description": "JavaScript 30 個練習挑戰 & 心得記錄",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --directory --server --files \"**/*.html, **/*.css, **/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VisionYi/JavaScript30-Challenge.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
