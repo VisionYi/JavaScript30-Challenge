@@ -1,0 +1,68 @@
+html {
+    background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background-size: cover;
+    font-size: 10px;
+    font-family: 'helvetica neue';
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    margin: 50px auto;
+    padding: 2rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hand {
+    position: absolute;
+    border-radius: 5px;
+    transform-origin: bottom;
+    transition: all 0.05s;
+    /* 可以讓動畫過程擁有 激烈化 或 緩和平順 的視覺感 */
+    transition-timing-function: cubic-bezier(0, 2, 1, 1);
+}
+
+/**
+ * 預設先讓 時針、分針、秒針 都垂直指向 12 點鐘方向
+ * 每個寬度與長度都不一樣
+ */
+.second-hand {
+    height: 50%;
+    left: calc(50% - 2px);
+    width: 4px;
+    background: red;
+}
+
+.min-hand {
+    top: 5%;
+    height: 45%;
+    left: calc(50% - 3px);
+    width: 6px;
+    background: black;
+}
+
+.hour-hand {
+    top: 10%;
+    height: 40%;
+    left: calc(50% - 5px);
+    width: 10px;
+    background: black;
+}
