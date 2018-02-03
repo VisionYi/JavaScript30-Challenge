@@ -1,0 +1,104 @@
+html {
+    box-sizing: border-box;
+    background:#ffc600;
+    font-family:'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.panels {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel {
+    background: #6B0F9C;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition:
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+}
+
+.panel1 { background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+.panel2 { background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
+.panel3 { background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+.panel4 { background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+.panel5 { background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+
+.panel > p {
+    margin: 0;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    text-transform: uppercase;
+    transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        transform 0.5s;
+}
+
+.panel > p:nth-child(2) {
+    font-size: 4rem;
+}
+
+/* 以下為加入 flex 功能，總共使用 3 層 flexbox */
+
+.panels {
+    display: flex;
+    align-items: stretch;
+}
+
+.panels .panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel > p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 以下為動畫附加功能 */
+
+.panel.open {
+    flex: 5;
+}
+
+.panel > p:first-child {
+    transform: translateY(-100%);
+}
+.panel > p:last-child {
+    transform: translateY(100%);
+}
+
+.panel.move-text > p:first-child,
+.panel.move-text > p:last-child {
+    transform: translateY(0);
+}
+
+.panel.open > p:first-child,
+.panel.open > p:last-child {
+    font-size: 4rem;
+}
+
+.panel.open > p:nth-child(2) {
+    font-size: 8rem;
+}
