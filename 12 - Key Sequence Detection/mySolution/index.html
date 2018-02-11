@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+    <style>
+        .highlight {
+            color: red;
+            font-style: italic;
+        }
+
+        .block {
+            margin: 20px;
+            margin-left: 20%;
+            font-weight: 600;
+        }
+    </style>
+
+    <div class="block">
+        <label for="secret">請設定密語 : </label>
+        <input type="text" name="secret">
+        <span id="number" class="highlight"></span>
+    </div>
+    <div class="block">
+        <label for="pressed">請輸入密語 : </label>
+        <input type="text" name="pressed">
+        <span id="success" class="highlight"></span>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
