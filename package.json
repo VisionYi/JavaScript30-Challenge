@@ -13,9 +13,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.23.5",
-    "eslint": "^4.15.0",
+    "browser-sync": "^2.24.6",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.13.0"
   }
 }
